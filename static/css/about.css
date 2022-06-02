@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(/img/about.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+}
+
+header .navigation li{
+    list-style: none;
+}
+
+header .navigation li a{
+    display: inline-block;
+    color: #fff;
+    margin-right: 40px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+header .navigation li a:hover{
+    background-color: rgba(3, 168, 244, 0.807);
+    border-radius: 3px;
+    padding: 5px;
+    text-decoration: underline;
+}
+
+.content{
+    max-width: 1500px;
+    text-align: center;
+    margin-left: auto;
+}
+
+.content .contentBx h2{
+    font-size: 3em;
+    color: #fff;
+    line-height: 1em;
+}
+
+span{
+    color: rgba(3, 168, 244, 0.807);
+}
+
+.content .contentBx p{
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.content .contentBx a{
+    display: inline-block;
+    padding: 10px 30px;
+    margin-left: 10px;
+    background: rgba(3, 168, 244, 0.807);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.content .contentBx a:hover{
+    background: rgba(0,0,0,0);
+	color: #fff;
+	box-shadow: inset 0 0 0 3px rgba(3, 168, 244, 0.807);
+}
+
+.social{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+}
+
+.social li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li a{
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    filter: invert(1);
+    transform: scale(0.6);
+    transition: 0.5s;
+}
+
+.social li a:hover{
+    transform: translateZ(1px);
+}
+
+@media (max-width:991px){
+    header{
+        padding: 15px 40px;
+    }
+    section{
+        padding: 40px;
+        background: url(/img/about.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .content .contentBx h2{
+        font-size: 2.5em;
+    }
+    .content .contentBx p{
+        font-size: 1em;
+    }
+    .content .contentBx a{
+        padding:10px 20px;
+    }
+    header .navigation{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        z-index: 10;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header .navigation.active{
+        display: flex;
+    }
+    header .navigation li a{
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .toggleMenu{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(/img/menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        z-index: 11;
+        cursor: pointer;
+    }
+    .toggleMenu.active{
+        background: url(/img/close.png);
+        background-position: center;
+        background-size: 25px;
+        background-repeat: no-repeat;
+    }
+}
